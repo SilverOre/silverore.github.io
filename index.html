@@ -5,8 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>silverore｜礦石 · 銀飾</title>
     <style>
+        <script>
+const texts = {
+  zh: {
+    hero_title: "SilverOre｜礦石 · 銀飾",
+    hero_text: "原創輕奢哥特風珠寶，天然原石與銀器融合",
+    hero_btn: "瀏覽產品",
+    product_title: "產品系列",
+    brand_title: "品牌介紹",
+    service_title: "服務",
+    subscribe_title: "訂閱會員，獲得HK$40優惠",
+    subscribe_text: "接收新品銀飾資訊與限定優惠",
+    subscribe_btn: "訂閱",
+    popup_title: "歡迎來到 silverore ✨",
+    popup_text: "輸入電郵，領取HK$40新客優惠券",
+    popup_btn: "領取優惠"
+  },
+  en: {
+    hero_title: "SilverOre｜Raw Stone · Silver Jewellery",
+    hero_text: "Original light luxury gothic jewellery, natural stone & silver",
+    hero_btn: "View Products",
+    product_title: "Product Collection",
+    brand_title: "About Us",
+    service_title: "Services",
+    subscribe_title: "Subscribe & Get HK$40 Off",
+    subscribe_text: "Receive new product updates & exclusive offers",
+    subscribe_btn: "Subscribe",
+    popup_title: "Welcome to SilverOre ✨",
+    popup_text: "Enter your email to get HK$40 new customer coupon",
+    popup_btn: "Get Coupon"
+  }
+};
+
+function setLang(lang) {
+  document.querySelectorAll("[data-lang]").forEach(el=>{
+    const key = el.getAttribute("data-lang");
+    el.innerText = texts[lang][key];
+  })
+}
+window.onload = ()=> setLang("zh");
+</script>
         * {margin:0;padding:0;box-sizing:border-box;font-family: system-ui,-apple-system, sans-serif;}
         body {background:#fefefe;color:#222;line-height:1.7;}
+        <div style="text-align:right; padding:10px;">
+  <button onclick="setLang('zh')" style="padding:6px 10px; margin:2px;">中文</button>
+  <button onclick="setLang('en')" style="padding:6px 10px; margin:2px;">English</button>
+</div>
         /* 頂部大banner */
         .hero{
             height:75vh;
@@ -79,9 +123,9 @@
     <!-- 首頁大Banner -->
     <section class="hero">
         <div class="hero-text">
-            <h1>silverore｜礦石 · 銀飾</h1>
-            <p>天然礦石與925銀手工飾品，每一件都獨一無二</p>
-            <a href="#goods" class="btn">瀏覽產品</a>
+            <h1 data-lang="hero_title">SilverOre｜礦石 · 銀飾</h1>
+<p data-lang="hero_text">原創輕奢哥特風珠寶，天然原石與銀器融合</p>
+<button class="btn" data-lang="hero_btn">瀏覽產品</button>
         </div>
     </section>
 
