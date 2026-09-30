@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>silverore｜礦石 · 銀飾</title>
+    <style>
+        * {margin:0;padding:0;box-sizing:border-box;font-family: system-ui,-apple-system, sans-serif;}
+        body {background:#fefefe;color:#222;line-height:1.7;}
+        /* 頂部大banner */
+        .hero{
+            height:75vh;
+            background:url("https://images.unsplash.com/photo-1610375461246-83df859d849d?q=80") center / cover no-repeat;
+            display:flex;align-items:center;justify-content:center;
+            color:white;text-align:center;
+        }
+        .hero-text h1{font-size:36px;margin-bottom:10px;}
+        .hero-text p{font-size:17px;max-width:550px;margin:0 auto 24px;}
+        .btn{
+            display:inline-block;
+            padding:13px 30px;
+            background:#8c7851;
+            color:#fff;
+            text-decoration:none;
+            border:none;cursor:pointer;
+            border-radius:3px;font-size:16px;
+        }
+        .btn:hover{opacity:0.9;}
+        .container{max-width:1200px;margin:0 auto;padding:60px 20px;}
+        h2{text-align:center;margin-bottom:45px;font-weight:400;font-size:28px;}
+        /* 產品格子 */
+        .product-grid{
+            display:grid;
+            grid-template-columns: repeat(auto‑fit, minmax(270px, 1fr));
+            gap:35px;
+        }
+        .product-card{text-align:center;}
+        .product-card img{
+            width:100%;height:340px;object‑fit:cover;margin-bottom:14px;
+            border-radius:4px;
+        }
+        .product-card h3{margin-bottom:6px;}
+        .price{color:#777;margin-bottom:14px;font-size:17px;}
+        /* 品牌介紹 */
+        .brand-section{background:#f7f4ef;padding:70px 20px;text-align:center;}
+        .brand-section p{max‑width:650px;margin:0 auto;}
+        /* 服務區塊 */
+        .service-grid{
+            display:grid;
+            grid-template-columns: repeat(auto‑fit, minmax(220px,1fr));
+            gap:30px;
+        }
+        .service-item{text-align:center;}
+        /* 訂閱區 */
+        .subscribe-area{
+            background:#f3efe8;padding:55px 20px;text-align:center;
+        }
+        input.email-box{
+            padding:13px 16px;width:min(360px,95%);
+            border:1px solid #ccc;font-size:16px;margin-bottom:12px;
+        }
+        /* 彈窗popup */
+        .popup-bg{
+            position:fixed;inset:0;background:rgba(0,0,0,0.55);
+            display:none;align-items:center;justify-content:center;
+            z-index:9999;
+        }
+        .popup{
+            background:#fff;padding:42px 30px;max-width:480px;width:92%;
+            text-align:center;border-radius:6px;
+        }
+        .close-btn{
+            margin-top:18px;color:#666;cursor:pointer;
+        }
+        footer{text-align:center;padding:30px;background:#222;color:#aaa;font-size:14px;}
+    </style>
+</head>
+<body>
+    <!-- 首頁大Banner -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>silverore｜礦石 · 銀飾</h1>
+            <p>天然礦石與925銀手工飾品，每一件都獨一無二</p>
+            <a href="#goods" class="btn">瀏覽產品</a>
+        </div>
+    </section>
+
+    <!-- 產品區域 -->
+    <section id="goods" class="container">
+        <h2>精選產品</h2>
+        <div class="product-grid">
+            <!-- 產品1：礦石頸鏈 -->
+            <div class="product-card">
+                <img alt="礦石銀頸鏈" src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80">
+                <h3>天然紫水晶925銀頸鏈</h3>
+                <div class="price">HKD 680</div>
+                <a href="https://buy.stripe.com/替換成你的Stripe連結" target="_blank" class="btn">立即購買</a>
+            </div>
+            <!-- 產品2：銀戒指 -->
+            <div class="product-card">
+                <img alt="礦石銀戒指" src="https://images.unsplash.com/photo-1603561596112-0a132b757442?q=80">
+                <h3>月光石開口銀戒指</h3>
+                <div class="price">HKD 520</div>
+                <a href="https://buy.stripe.com/替換成你的Stripe連結" target="_blank" class="btn">立即購買</a>
+            </div>
+            <!-- 產品3：耳環 -->
+            <div class="product-card">
+                <img alt="礦石銀耳環" src="https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80">
+                <h3>天河石銀耳環</h3>
+                <div class="price">HKD 460</div>
+                <a href="https://buy.stripe.com/替換成你的Stripe連結" target="_blank" class="btn">立即購買</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 品牌介紹 -->
+    <section class="brand-section">
+        <div class="container">
+            <h2>關於 silverore</h2>
+            <p>我們專注天然礦石同925銀飾。每一塊礦石紋理都唔一樣，製作出獨特嘅銀飾。堅持用料實在，手工打磨，將礦石嘅自然美帶俾你。</p>
+        </div>
+    </section>
+
+    <!-- 售後服務 -->
+    <section class="container">
+        <h2>我們的服務</h2>
+        <div class="service-grid">
+            <div class="service-item">
+                <h4>925純銀材質</h4>
+                <p>全部銀飾採用標準925銀</p>
+            </div>
+            <div class="service-item">
+                <h4>天然礦石</h4>
+                <p>每件礦石紋理獨一無二</p>
+            </div>
+            <div class="service-item">
+                <h4>保養服務</h4>
+                <p>銀飾免費清洗保養建議</p>
+            </div>
+            <div class="service-item">
+                <h4>滿2件免運</h4>
+                <p>香港及海外滿額免運</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 電郵訂閱 -->
+    <section class="subscribe-area">
+        <h3>訂閱會員，獲得HK$40優惠</h3>
+        <p style="margin:12px 0;">接收新品礦石銀飾資訊與限定優惠</p>
+        <form action="https://formspree.io/f/替換成Formspree連結" method="POST">
+            <input class="email-box" name="email" placeholder="輸入你的電郵" type="email" required>
+            <br>
+            <button type="submit" class="btn">訂閱</button>
+        </form>
+    </section>
+
+    <!-- 開網頁彈出的促銷彈窗 -->
+    <div class="popup-bg" id="popup1">
+        <div class="popup">
+            <h3>歡迎來到 silverore ✨</h3>
+            <p style="margin:16px 0;">輸入電郵，領取HK$40新客優惠券</p>
+            <form action="https://formspree.io/f/替換成Formspree連結" method="POST">
+                <input class="email-box" name="email" placeholder="你的電郵地址" type="email" required>
+                <br>
+                <button type="submit" class="btn">領取優惠</button>
+            </form>
+            <div class="close-btn" onclick="closePop()">關閉</div>
+        </div>
+    </div>
+
+    <footer>
+        © 2026 silverore｜天然礦石 · 925銀飾
+    </footer>
+
+    <script>
+        // 打開網頁自動彈窗
+        const pop = document.getElementById("popup1");
+        window.addEventListener("load",function(){
+            pop.style.display = "flex";
+        })
+        function closePop(){
+            pop.style.display = "none";
+        }
+    </script>
+</body>
+</html>
